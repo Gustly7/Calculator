@@ -1,0 +1,87 @@
+body{
+    background-image: url("./../assets/BG001.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+#bgDiv {
+    position: relative;
+    width: 100%;
+    background-image: url("./../assets/BG002.png");
+    background-attachment: fixed;
+    background-size: 1980px, auto;
+}
+
+#bgDiv::after{
+    content: "";
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+div.firstDiv img {
+    margin-left: -15px;
+}
+
+div.firstDiv {
+    padding-bottom: 40px;
+}
+
+div.firstDiv, hr {
+    background-color: #f1f1f1;
+}
+
+div.secondDiv {
+    padding: 0px 250px 0px 250px;
+}
+
+div.secondDiv {
+    background-color: #616161;
+    color: #f1f1f1;
+    padding-bottom: 20px;
+}
+
+.progress-bar-my {
+    background-color: gray;
+}
+
+.myDivHeader01 {
+    background-color: black;
+    padding: 30px;
+}
+
+.myDiv01 {
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    border-bottom: solid;
+}
+
+.myDivFooter01 {
+    background-color: darkgray;
+    padding: 28px;
+}
+
+.myDiv03 {
+    background-color: #f1f1f1;
+    padding: 25px 250px 25px 250px;
+}
+
+.myDiv04 {
+    background-color: darkgray;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.myBut01 {
+    padding: 0px 5px 0px 5px;
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
