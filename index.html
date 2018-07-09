@@ -6,206 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sticky-footer.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 
-    <title>Hello, world!</title>
+    <title>Calculator</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#firstDiv">Foto</a>
-            <a class="nav-item nav-link" href="#secondDiv">About me</a>
-            <a class="nav-item nav-link" href="#myDiv03">Contact Me</a>
-            <a class="nav-item nav-link" href="#myDiv04">Info</a>
-        </div>
-    </div>
-</nav>
-<div id="bgDiv">
+<div class="wrapper">
     <div class="container">
-        <div class="row firstDiv" id="firstDiv">
-            <div class="col-lg-4 col-xs-6 col-md-6 col-sm-6">
-                <img src="https://loremflickr.com/380/300?random=1" />
-            </div>
-            <div class="col-lg-4 col-xs-6 col-md-6 col-sm-6">
-                <img src="https://loremflickr.com/380/300?random=2" />
-            </div>
-            <div class="col-lg-4 col-xs-6 col-md-6 col-sm-6">
-                <img src="https://loremflickr.com/380/300?random=3" />
-            </div>
-            <div class="col-lg-4 col-xs-6 col-md-6 col-sm-6">
-                <img src="https://loremflickr.com/380/300?random=4" />
-            </div>
-            <div class="col-lg-4 col-xs-6 col-md-6 col-sm-6">
-                <img src="https://loremflickr.com/380/300?random=5" />
-            </div>
-            <div class="col-lg-4 col-xs-6 col-md-6 col-sm-6">
-                <img src="https://loremflickr.com/380/300?random=6" />
-            </div>
-        </div>
-        <div class="row secondDiv" id="secondDiv">
-            <div class="col-lg-12 text-center">
-                <h2>About me</h2>
-            </div>
-            <div class="col-lg-12 text-center">
-                <img src="https://loremflickr.com/640/480" />
-            </div>
-            <div class="col-lg-12">
-                <h3>My name</h3>
-                <p>I'm cat too. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa
-                    qui officia deserunt mollit anim id est laborum.</p>
-                <p>mail: qwe@asd.com</p>
-                <p>tel: 555-55-55</p>
-                <hr>
-                <h3>Techical Skills</h3>
-                <p>Coding</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-my" role="progressbar" aria-valuenow="70"
-                         aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                        70%
+        <div class="row">
+            <div class="col-md-12">
+                <header id="header">
+                    <div class="header-div01">
+                    </div>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Themes
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" data-theme="Light" class="theme-link">Default</a></li>
+                                        <li><a href="#" data-theme="Dark" class="theme-link">Dark2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+                <div id="calculator">
+                    <div class="top">
+                        <div class="screen"></div>
+
+                    </div>
+                    <div class="keys">
+                        <span class="clear calc-btn" data-oper="backspace">←</span>
+                        <span class="clear calc-btn" data-oper="clear1">CE</span>
+                        <span class="clear calcKey-67 calcKey-46 calc-btn" data-oper="clear">C</span>
+                        <span class="clear calc-btn" data-oper="invert">±</span>
+                        <span class="clear calc-btn" data-oper="sqrt">√</span>
+                        <span class="calcKey-103 calc-btn" data-oper="7">7</span>
+                        <span class="calcKey-104 calc-btn" data-oper="8">8</span>
+                        <span class="calcKey-105 calc-btn" data-oper="9">9</span>
+                        <span class="calcKey-111 calc-btn operator" data-oper="division">/</span>
+                        <span class="operator calc-btn" data-oper="procent">%</span>
+                        <span class="calcKey-100 calc-btn" data-oper="4">4</span>
+                        <span class="calcKey-101 calc-btn" data-oper="5">5</span>
+                        <span class="calcKey-102 calc-btn" data-oper="6">6</span>
+                        <span class="calcKey-106 calc-btn operator" data-oper="mult">x</span>
+                        <span class="calc-btn operator" data-oper="invert2">1/x</span>
+                        <span class="calcKey-97 calc-btn" data-oper="1">1</span>
+                        <span class="calcKey-98 calc-btn" data-oper="2">2</span>
+                        <span class="calcKey-99 calc-btn" data-oper="3">3</span>
+                        <span class="calcKey-109 calc-btn operator" data-oper="minus">-</span>
+                        <span class="calcKey-13 calc-btn eval" data-oper="eval">=</span>
+                        <span class="calcKey-96 calc-btn calc-btn-zero" data-oper="0">0</span>
+                        <span class="calcKey-110 calc-btn" data-oper="dot">.</span>
+                        <span class="calcKey-107 calc-btn operator" data-oper="plus">+</span>
                     </div>
                 </div>
-                <br />
-                <p>Lying</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-my" role="progressbar" aria-valuenow="95"
-                         aria-valuemin="0" aria-valuemax="100" style="width:95%">
-                        95%
-                    </div>
-                </div>
-                <br />
-                <p>Other</p>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-my" role="progressbar" aria-valuenow="50"
-                         aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                        50%
-                    </div>
-                </div>
-                <br />
-                <button type="button" class="btn">Download Resume</button>
-                <hr>
-                <p>How much I charge </p>
-                <div class="row">
-                    <div class="col-lg-5 text-center">
-                        <div class="row">
-                            <div class="col-lg-12 text-center myDivHeader01">Basic</div>
-                            <div class="col-lg-12 text-center myDiv01">Web Design</div>
-                            <div class="col-lg-12 text-center myDiv01">Photography</div>
-                            <div class="col-lg-12 text-center myDiv01">5GB Storage</div>
-                            <div class="col-lg-12 text-center myDiv01">Mail Support</div>
-                            <div class="col-lg-12 text-center myDiv01"><h3>$ 10</h3>
-                                <p>per month</p></div>
-                            <div class="col-lg-12 text-center myDivFooter01">
-                                <button type="button" class="btn">Sign Up</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-5 text-center">
-                        <div class="row">
-                            <div class="col-lg-12 text-center myDivHeader01">Pro</div>
-                            <div class="col-lg-12 text-center myDiv01">Web Design</div>
-                            <div class="col-lg-12 text-center myDiv01">Photography</div>
-                            <div class="col-lg-12 text-center myDiv01">50GB Storage</div>
-                            <div class="col-lg-12 text-center myDiv01">Endless Support</div>
-                            <div class="col-lg-12 text-center myDiv01"><h3>$ 25</h3>
-                                <p>per month</p></div>
-                            <div class="col-lg-12 text-center myDivFooter01">
-                                <button type="button" class="btn">Sign Up</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row myDiv03" id="myDiv03">
-            <div class="col-lg-12">
-                <h2>Contact Me</h2>
-                <p>Do you want me to photograph you? Full out the form and fill me in with the details ;) I love meeting
-                    new
-                    people!</p>
-                <p>Name</p>
-                <input type="text" class="form-control" id="Name">
-                <p>Email</p>
-                <input type="text" class="form-control" id="Email">
-                <p>Message</p>
-                <input type="text" class="form-control" id="Message">
-                <button type="button" class="btn" style="background-color: black; color: white; width: 100%">Send
-                    Message
-                </button>
-            </div>
-        </div>
-        <div class="row myDiv04" id="myDiv04">
-            <div class="col-lg-4">
-                <h2>INFO</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex ea commodo consequat</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>BLOG POSTS</h2>
-                <div class="container myDiv04">
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <img src="https://loremflickr.com/32/32" />
-                        </div>
-                        <div class="col-lg-10">
-                            <h4>Lorem</h4>
-                            <p>Sed mattis nunc</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <img src="https://loremflickr.com/31/32" />
-                        </div>
-                        <div class="col-lg-10">
-                            <h4>Ipsum</h4>
-                            <p>Praes tinci sed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <h2>POPULAR TAGS</h2>
-                <p>
-                    <button type="button" class="btn-sm btn-primary myBut01">Travel</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">New York</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">London</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">IKEA</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">NORWAY</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">DIY</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Ideas</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Baby</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Family</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">News</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Clothing</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Shopping</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Sports</button>
-                    <button type="button" class="btn-sm btn-primary myBut01">Games</button>
-                </p>
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                        crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+                        crossorigin="anonymous"></script>
+                <script src="./js/main.js"></script>
+                <script src="./js/calculator.js"></script>
             </div>
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-            crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Calculator task.<br>Author: Perov V.A. ©</span>
+        </div>
+    </footer>
 </div>
+<script>
+    init();
+</script>
 </body>
 </html>
