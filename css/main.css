@@ -19,7 +19,7 @@ html {
 }
 
 /* Using box shadows to create 3D effects */
-#calculator {
+div.calculator {
     width: 253px;
     height: auto;
 
@@ -100,6 +100,10 @@ html {
     width: 79px;
 }
 
+.keys .row{
+    margin-left: 0px;
+}
+
 /* Remove right margins from operator keys */
 /* style different type of keys (operators/evaluate/clear) differently */
 .keys span.operator {
@@ -111,6 +115,12 @@ html {
     background: #f1ff92;
     box-shadow: 0px 4px #9da853;
     color: #888e5f;
+    height: 83px;
+    position: absolute;
+}
+
+.keys div.eval{
+    position: relative;
 }
 
 .top span.clear {

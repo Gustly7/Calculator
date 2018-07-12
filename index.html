@@ -9,6 +9,7 @@
 
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/ant.css">
     <link rel="stylesheet" href="./css/sticky-footer.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -53,35 +54,47 @@
                         </div>
                     </nav>
                 </header>
-                <div id="calculator">
+                <div class="calculator">
                     <div class="top">
                         <div class="screen"></div>
 
                     </div>
                     <div class="keys">
-                        <span class="clear calc-btn" data-oper="backspace">←</span>
-                        <span class="clear calc-btn" data-oper="clear1">CE</span>
-                        <span class="clear calcKey-67 calcKey-46 calc-btn" data-oper="clear">C</span>
-                        <span class="clear calc-btn" data-oper="invert">±</span>
-                        <span class="clear calc-btn" data-oper="sqrt">√</span>
-                        <span class="calcKey-103 calc-btn" data-oper="7">7</span>
-                        <span class="calcKey-104 calc-btn" data-oper="8">8</span>
-                        <span class="calcKey-105 calc-btn" data-oper="9">9</span>
-                        <span class="calcKey-111 calc-btn operator" data-oper="division">/</span>
-                        <span class="operator calc-btn" data-oper="procent">%</span>
-                        <span class="calcKey-100 calc-btn" data-oper="4">4</span>
-                        <span class="calcKey-101 calc-btn" data-oper="5">5</span>
-                        <span class="calcKey-102 calc-btn" data-oper="6">6</span>
-                        <span class="calcKey-106 calc-btn operator" data-oper="mult">x</span>
-                        <span class="calc-btn operator" data-oper="invert2">1/x</span>
-                        <span class="calcKey-97 calc-btn" data-oper="1">1</span>
-                        <span class="calcKey-98 calc-btn" data-oper="2">2</span>
-                        <span class="calcKey-99 calc-btn" data-oper="3">3</span>
-                        <span class="calcKey-109 calc-btn operator" data-oper="minus">-</span>
-                        <span class="calcKey-13 calc-btn eval" data-oper="eval">=</span>
-                        <span class="calcKey-96 calc-btn calc-btn-zero" data-oper="0">0</span>
-                        <span class="calcKey-110 calc-btn" data-oper="dot">.</span>
-                        <span class="calcKey-107 calc-btn operator" data-oper="plus">+</span>
+                        <div class="row">
+                            <span class="clear calc-btn" data-oper="backspace">←</span>
+                            <span class="clear calc-btn" data-oper="clear1">CE</span>
+                            <span class="clear calcKey-67 calcKey-46 calc-btn" data-oper="clear">C</span>
+                            <span class="clear calc-btn" data-oper="invert">±</span>
+                            <span class="clear calc-btn" data-oper="sqrt">√</span>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-103 calc-btn" data-oper="7">7</span>
+                            <span class="calcKey-104 calc-btn" data-oper="8">8</span>
+                            <span class="calcKey-105 calc-btn" data-oper="9">9</span>
+                            <span class="calcKey-111 calc-btn operator" data-oper="division">/</span>
+                            <span class="operator calc-btn" data-oper="procent">%</span>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-100 calc-btn" data-oper="4">4</span>
+                            <span class="calcKey-101 calc-btn" data-oper="5">5</span>
+                            <span class="calcKey-102 calc-btn" data-oper="6">6</span>
+                            <span class="calcKey-106 calc-btn operator" data-oper="mult">x</span>
+                            <span class="calc-btn operator" data-oper="invert2">1/x</span>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-97 calc-btn" data-oper="1">1</span>
+                            <span class="calcKey-98 calc-btn" data-oper="2">2</span>
+                            <span class="calcKey-99 calc-btn" data-oper="3">3</span>
+                            <span class="calcKey-109 calc-btn operator" data-oper="minus">-</span>
+                            <div class="eval">
+                                <span class="calcKey-13 calc-btn eval" data-oper="eval">=</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-96 calc-btn calc-btn-zero" data-oper="0">0</span>
+                            <span class="calcKey-110 calc-btn" data-oper="dot">.</span>
+                            <span class="calcKey-107 calc-btn operator" data-oper="plus">+</span>
+                        </div>
                     </div>
                 </div>
                 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -91,6 +104,7 @@
                         crossorigin="anonymous"></script>
                 <script src="./js/main.js"></script>
                 <script src="./js/calculator.js"></script>
+                <script src="./js/ant.js"></script>
             </div>
         </div>
     </div>
@@ -101,7 +115,10 @@
     </footer>
 </div>
 <script>
-    init();
+  $('div.calculator').clone().insertAfter( $('div.calculator') );
+  calculator().init();
+  ant().init();
+  ant.nextStep();
 </script>
 </body>
 </html>
