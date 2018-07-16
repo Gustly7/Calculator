@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="./css/sticky-footer.css">
+    <link rel="stylesheet" href="./css/ant.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+    <title>Calculator</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <h1> <%= htmlWebpackPlugin.options.webpackMode %> </h1>
+        <div class="row">
+            <div class="col-md-12">
+                <header id="header">
+                    <div class="header-div01">
+                    </div>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Themes
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" data-theme="Light" class="theme-link">Default</a></li>
+                                        <li><a href="#" data-theme="Dark" class="theme-link">Dark2</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+                <div class="calculator">
+                    <div class="top">
+                        <div class="actions"></div>
+                        <div class="screen"></div>
+                    </div>
+                    <div class="keys">
+                        <div class="row">
+                            <span class="clear calc-btn" data-oper="backspace">←</span>
+                            <span class="clear calc-btn" data-oper="clear1">CE</span>
+                            <span class="clear calcKey-67 calcKey-46 calc-btn" data-oper="clear">C</span>
+                            <span class="clear calc-btn" data-oper="invert">±</span>
+                            <span class="clear calc-btn" data-oper="sqrt">√</span>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-103 calc-btn" data-oper="7">7</span>
+                            <span class="calcKey-104 calc-btn" data-oper="8">8</span>
+                            <span class="calcKey-105 calc-btn" data-oper="9">9</span>
+                            <span class="calcKey-111 calc-btn operator" data-oper="division">/</span>
+                            <span class="operator calc-btn" data-oper="procent">%</span>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-100 calc-btn" data-oper="4">4</span>
+                            <span class="calcKey-101 calc-btn" data-oper="5">5</span>
+                            <span class="calcKey-102 calc-btn" data-oper="6">6</span>
+                            <span class="calcKey-106 calc-btn operator" data-oper="mult">x</span>
+                            <span class="calc-btn operator" data-oper="invert2">1/x</span>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-97 calc-btn" data-oper="1">1</span>
+                            <span class="calcKey-98 calc-btn" data-oper="2">2</span>
+                            <span class="calcKey-99 calc-btn" data-oper="3">3</span>
+                            <span class="calcKey-109 calc-btn operator" data-oper="minus">-</span>
+                            <div class="eval">
+                                <span class="calcKey-13 calc-btn eval" data-oper="eval">=</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="calcKey-96 calc-btn calc-btn-zero" data-oper="0">0</span>
+                            <span class="calcKey-110 calc-btn" data-oper="dot">.</span>
+                            <span class="calcKey-107 calc-btn operator" data-oper="plus">+</span>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                        crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+                        crossorigin="anonymous"></script>
+                <script src="./js/main2.js"></script>
+                <script src="./js/calculator.js"></script>
+                <script src="./js/ant.js"></script>
+                <script src="./../dist/bundle2.js"></script>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Calculator task.<br>Author: Perov V.A. ©</span>
+        </div>
+    </footer>
+</div>
+<script>
+  $('div.calculator').clone().insertAfter($('div.calculator'));
+  calculator().init();
+  ant().init();
+  //ant.nextStep();
+</script>
+</body>
+</html>

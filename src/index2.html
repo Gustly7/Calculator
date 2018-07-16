@@ -20,6 +20,7 @@
 <body>
 <div class="wrapper">
     <div class="container">
+        <h1> Development mode </h1>
         <div class="row">
             <div class="col-md-12">
                 <header id="header">
@@ -102,9 +103,10 @@
                         crossorigin="anonymous"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
                         crossorigin="anonymous"></script>
-                <script src="./js/main.js"></script>
-                <script src="./js/calculator.js"></script>
-                <script src="./js/ant.js"></script>
+                <script src="./js/main2.js"></script>
+                <script src="./js/calculator2.js"></script>
+                <script src="./js/ant2.js"></script>
+                <script src="./../dist/bundle.js"></script>
             </div>
         </div>
     </div>
@@ -115,10 +117,10 @@
     </footer>
 </div>
 <script>
-  $('div.calculator').clone().insertAfter( $('div.calculator') );
+  $('div.calculator').clone().insertAfter($('div.calculator'));
   calculator().init();
   ant().init();
   ant.nextStep();
 </script>
-</body>
+<script type="text/javascript" src="../dist/bundle.js"></script></body>
 </html>
